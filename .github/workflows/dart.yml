@@ -42,5 +42,11 @@ jobs:
       # - name: Run tests
       #   run: dart test
       
+      - name: Enable desktop
+        run: flutter config --enable-windows-desktop
+      
+      - name: Run flutter doctor
+        run: flutter doctor -v
+      
       - name: Build MSIX
         run: flutter pub run msix:create

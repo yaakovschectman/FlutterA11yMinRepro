@@ -57,3 +57,12 @@ jobs:
         with:
           name: MSIX
           path: build/windows/runner/Release/*.msix
+      
+      - name: Upload to Store
+        uses: isaacrlevin/windows-store-action@1.0
+        with:
+          tenant-id: ${{ secrets.AZURE_AD_TENANT_ID }}
+          client-id: ${{ secrets.AZURE_AD_ClIENT_ID }}
+          client-secret: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
+          app-id: ${{ secrets.STORE_APP_ID }}
+          package-path: bulid/windows/runner/Release/tab_test.msix

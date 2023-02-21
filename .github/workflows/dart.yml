@@ -50,4 +50,4 @@ jobs:
         run: flutter doctor -v
       
       - name: Build MSIX
-        run: flutter pub run msix:create --install-certificate true
+        run: flutter pub run msix:create --install-certificate false

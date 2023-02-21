@@ -58,6 +58,12 @@ jobs:
           name: MSIX
           path: build/windows/runner/Release/*.msix
       
+      - name: Echo CWD
+        run: cd
+      
+      - name: Echo files
+        run: dir build\windows\runner\Release
+      
       - name: Upload to Store
         uses: isaacrlevin/windows-store-action@1.0
         with:
@@ -65,4 +71,4 @@ jobs:
           client-id: ${{ secrets.AZURE_AD_ClIENT_ID }}
           client-secret: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
           app-id: ${{ secrets.STORE_APP_ID }}
-          package-path: ${{ github.workspace }}/build/windows/runner/Release/*.msix
+          package-path: ${{ github.workspace }}/build/windows/runner/Release/tab_test.msix

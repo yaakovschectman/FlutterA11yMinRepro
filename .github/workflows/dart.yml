@@ -51,3 +51,9 @@ jobs:
       
       - name: Build MSIX
         run: flutter pub run msix:create --install-certificate false
+      
+      - name: Upload MSIX
+        uses: actions/upload-artifact@v3
+        with:
+          name: MSIX
+          path: build/windows/runner/Release/*.msix

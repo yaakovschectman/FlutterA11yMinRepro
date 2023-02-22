@@ -25,6 +25,10 @@ jobs:
       # https://github.com/dart-lang/setup-dart/blob/main/README.md
       # - uses: dart-lang/setup-dart@v1
       - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
+      - uses: actions/setup-python@v4
+      
+      - name: Regenerate pubspec.yaml
+        run: python pubspec.py ${{ secrets.IDENTITY }} ${{ secrets.PUBLISHER }}
 
       - name: Install dependencies
         run: dart pub get

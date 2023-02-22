@@ -90,3 +90,10 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+msix_config:
+  display_name: MSIXFlutterYes
+  publisher_display_name: YaakovSchectman
+  identity_name: {{IDENTITY}}
+  publisher: {{PUBLISHER}}
+  store: true

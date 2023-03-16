@@ -69,7 +69,7 @@ jobs:
         run: dir build\windows\runner\Release
       
       - name: Upload to Store
-        uses: isaacrlevin/windows-store-action@1.0
+        uses: yaakovschectman/windows-store-action@logging
         with:
           tenant-id: ${{ secrets.AZURE_AD_TENANT_ID }}
           client-id: ${{ secrets.AZURE_AD_ClIENT_ID }}

@@ -26,9 +26,7 @@ jobs:
       # - uses: dart-lang/setup-dart@v1
       - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
       - uses: actions/setup-python@v4
-      
-      - name: Install MS CLI
-        run: winget install Microsoft.DotNet.DesktopRuntime.7 && winget install "Microsoft Store Developer CLI"
+      - uses: microsoft/setup-msstore-cli@v1
       
       - name: Configure MS CLI
         run: msstore reconfigure --tenantId ${{ secrets.AZURE_AD_TENANT_ID }} --clientId ${{ secrets.AZURE_AD_ClIENT_ID }} --clientSecret ${{ secrets.AZURE_AD_CLIENT_SECRET }}

@@ -29,7 +29,7 @@ jobs:
       - uses: microsoft/setup-msstore-cli@v1
       
       - name: Configure MS CLI
-        run: msstore reconfigure --tenantId ${{ secrets.AZURE_AD_TENANT_ID }} --clientId ${{ secrets.AZURE_AD_ClIENT_ID }} --clientSecret ${{ secrets.AZURE_AD_CLIENT_SECRET }}
+        run: msstore reconfigure --tenantId ${{ secrets.AZURE_AD_TENANT_ID }} --clientId ${{ secrets.AZURE_AD_ClIENT_ID }} --clientSecret ${{ secrets.AZURE_AD_CLIENT_SECRET }} --sellerId ${{ secrets.SELLER_ID }}
       
       - name: Regenerate pubspec.yaml
         run: python pubspec.py ${{ secrets.IDENTITY }} ${{ secrets.PUBLISHER }}

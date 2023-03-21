@@ -69,8 +69,8 @@ jobs:
       - name: Echo CWD
         run: cd
       
-      - name: Echo files
-        run: dir build\windows\runner\Release
+      #- name: Echo files
+      #  run: dir build\windows\runner\Release
       
       #- name: Upload to Store
       #  uses: yaakovschectman/windows-store-action@main

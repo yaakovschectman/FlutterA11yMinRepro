@@ -82,4 +82,4 @@ jobs:
       #    package-path: ${{ github.workspace }}\build\windows\runner\Release
       
       - name: CLI init
-        run: msstore init . -n ${{ secets.PUBLISHER_DISPLAY_NAME }} --package --publish
+        run: msstore init . -n ${{ secrets.PUBLISHER_DISPLAY_NAME }} --package --publish

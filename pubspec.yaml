@@ -47,7 +47,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
-  msix: ^3.8.0
+  msix: ^3.9.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -92,8 +92,11 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
 msix_config:
-  display_name: MSIXFlutterYes
+  msix_version: 0.0.1.0
+  logo_path: windows\runner\resources\app_icon.png
+  msstore_appId: 9N301F1DW6B5
+  display_name: MSIXFlutterYES
   publisher_display_name: YaakovSchectman
-  identity_name: {{IDENTITY}}
-  publisher: {{PUBLISHER}}
+  identity_name: 24931YaakovSchectman.MSIXFlutterTest0-YaakovSchect
+  publisher: CN=0212DB11-B47A-4163-852E-6EABD99F7886
   store: true

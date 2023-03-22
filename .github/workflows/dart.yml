@@ -81,5 +81,8 @@ jobs:
       #    app-id: ${{ secrets.STORE_APP_ID }}
       #    package-path: ${{ github.workspace }}\build\windows\runner\Release
       
-      - name: CLI init
-        run: msstore init . -n ${{ secrets.PUBLISHER_DISPLAY_NAME }} --package --publish
+      - name: MS package
+        run: msstore package .
+      
+      - name: MS publish
+        run: msstore publish 

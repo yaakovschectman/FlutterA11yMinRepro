@@ -18,32 +18,32 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v2
+      # - uses: subosito/flutter-action@v2
 
       # Note: This workflow uses the latest stable version of the Dart SDK.
       # You can specify other versions if desired, see documentation here:
       # https://github.com/dart-lang/setup-dart/blob/main/README.md
       # - uses: dart-lang/setup-dart@v1
-      - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
-      - uses: actions/setup-python@v4
+      # - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
+      # - uses: actions/setup-python@v4
       - uses: microsoft/setup-msstore-cli@v1
       
       - name: Configure MS CLI
         run: msstore reconfigure --tenantId ${{ secrets.AZURE_AD_TENANT_ID }} --clientId ${{ secrets.AZURE_AD_ClIENT_ID }} --clientSecret ${{ secrets.AZURE_AD_CLIENT_SECRET }} --sellerId ${{ secrets.SELLER_ID }}
       
-      - name: Regenerate pubspec.yaml
-        run: python pubspec.py ${{ secrets.IDENTITY }} ${{ secrets.PUBLISHER }}
+      #- name: Regenerate pubspec.yaml
+      #  run: python pubspec.py ${{ secrets.IDENTITY }} ${{ secrets.PUBLISHER }}
 
-      - name: Install dependencies
-        run: dart pub get
+      #- name: Install dependencies
+      #  run: dart pub get
 
       # Uncomment this step to verify the use of 'dart format' on each commit.
       # - name: Verify formatting
       #   run: dart format --output=none --set-exit-if-changed .
 
       # Consider passing '--fatal-infos' for slightly stricter analysis.
-      - name: Analyze project source
-        run: dart analyze
+      #- name: Analyze project source
+      #  run: dart analyze
 
       # Your project will need to have tests in test/ and a dependency on
       # package:test for this step to succeed. Note that Flutter projects will
@@ -51,11 +51,11 @@ jobs:
       # - name: Run tests
       #   run: dart test
       
-      - name: Enable desktop
-        run: flutter config --enable-windows-desktop
+      #- name: Enable desktop
+      #  run: flutter config --enable-windows-desktop
       
-      - name: Run flutter doctor
-        run: flutter doctor -v
+      #- name: Run flutter doctor
+      #  run: flutter doctor -v
       
       #- name: Build MSIX
       #  run: flutter pub run msix:create --install-certificate false
@@ -65,9 +65,6 @@ jobs:
       #  with:
       #    name: MSIX
       #    path: build/windows/runner/Release/*.msix
-      
-      - name: Echo CWD
-        run: cd
       
       #- name: Echo files
       #  run: dir build\windows\runner\Release

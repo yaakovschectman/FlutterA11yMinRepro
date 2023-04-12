@@ -92,7 +92,7 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
 msix_config:
-  msix_version: 0.0.1.1
+  msix_version: 0.0.2.0
   logo_path: windows\runner\resources\app_icon.png
   msstore_appId: 9N301F1DW6B5
   display_name: MSIXFlutterYES
